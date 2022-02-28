@@ -1,0 +1,39 @@
+# baseURI: http://definities.politie.nl/testbegrippengit
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: testbegrippengit
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix testbegrippengit: <http://definities.politie.nl/testbegrippengit#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://definities.politie.nl/testbegrippengit>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+testbegrippengit:TestConceptschema
+  a skos:ConceptScheme ;
+  rdfs:label "Test conceptschema" ;
+  skos:hasTopConcept testbegrippengit:Testbegrip_1 ;
+  skos:prefLabel "Test conceptschema" ;
+.
+testbegrippengit:Testbegrip_1
+  a skos:Concept ;
+  rdfs:label "Testbegrip 1" ;
+  skos:prefLabel "Testbegrip 1" ;
+.
+testbegrippengit:Testbegrip_2
+  a skos:Concept ;
+  rdfs:label "Testbegrip 2" ;
+  skos:broader testbegrippengit:Testbegrip_1 ;
+  skos:prefLabel "Testbegrip 2" ;
+.
+testbegrippengit:Testbegrip_3
+  a skos:Concept ;
+  rdfs:label "Testbegrip 3" ;
+  skos:broader testbegrippengit:Testbegrip_2 ;
+  skos:prefLabel "Testbegrip 3" ;
+.
